@@ -1,7 +1,12 @@
+import Header from "@/Elements/Header";
+import BackgroundImage from "@/Elements/Header/BackgroundImage";
+
 const Home: React.FC = () => {
   return (
     <>
-      <h1> Home page </h1>
+      <Header>
+        <BackgroundImage />
+      </Header>
     </>
   );
 };
