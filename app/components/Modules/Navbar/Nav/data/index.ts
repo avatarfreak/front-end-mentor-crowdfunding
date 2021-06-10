@@ -1,0 +1,1 @@
+export const MenuData: Array<string> = ["About", "Discover", "Get Started"];

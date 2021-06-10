@@ -6,6 +6,7 @@ const BackgroundImage = styled.div`
   background-size: cover;
   background-position: center;
   min-height: 37vh;
+  filter: brightness(35%);
 `;
 
 export default BackgroundImage;
