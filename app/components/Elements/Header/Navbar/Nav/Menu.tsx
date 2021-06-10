@@ -6,6 +6,7 @@ export const CollapsibleMenu = styled.nav`
   right: 0;
   filter: drop-shadow(0 0 2px gray);
   margin-top: 4rem;
+  z-index: 1;
 `;
 
 export const MenuWrapper = styled.ul`
