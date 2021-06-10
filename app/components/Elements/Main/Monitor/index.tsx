@@ -10,7 +10,7 @@ import {
 export const Card = styled(CardWrapper)`
   position: relative;
   background: #fff;
-  margin-top: -3.5rem;
+  margin-top: -4rem;
 `;
 
 export const Avatar = styled.div`
@@ -23,14 +23,15 @@ export const Avatar = styled.div`
 
 export const Header = styled.header``;
 
-export const Title = styled(TitleWrapper)`
-  font-size: calc(1rem + 1.066vw);
+export const Title = styled.h1`
+  font-size: calc(1rem + 1.6vw);
   padding: 1.5rem 2.5rem;
   color: var(--black);
 `;
 export const Body = styled.div``;
 
 export const Text = styled(TextWrapper)`
+  font-size: 1rem;
   font-weight: var(--regular);
 `;
 

@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   --black: hsl(0, 0%, 0%);
   --darkgray: hsl(0, 0%, 48%);
+  --gray:hsl(0, 10%, 98%);
 
   --regular: 400;
   --medium: 500;
@@ -20,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  font-size:14px;
+}
 
 html,
 body {
@@ -27,6 +31,7 @@ body {
   max-width: 1440px;
   height: 100vh;
   font-family: commissioner, sans-serif;
+  background:var(--gray);
 }
 img {
   max-width: 100%;

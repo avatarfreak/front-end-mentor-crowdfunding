@@ -1,4 +1,3 @@
-import { CardWrapper } from "@/Elements/Card/style";
 import Header from "@/Elements/Header";
 import { Avatar, Card, Title, Text, Footer, Bookmark, Button, Body } from "@/Elements/Main/Monitor";
 import Image from "next/image";

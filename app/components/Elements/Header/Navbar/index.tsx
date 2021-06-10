@@ -9,7 +9,7 @@ export const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: calc(1rem + 2.133vw);
+  margin: 2rem;
 `;
 
 export const Navbar: React.FC<React.ReactNode> = ({ children }) => {

@@ -1,12 +1,12 @@
-import { TextWrapper, TitleWrapper } from "@/Elements/Card/style";
+import { Text, Title } from "@/Elements/Main/Stats/style";
 import { StatContainer } from "@/Elements/Main/Stats";
 import { IStatProps } from "./type";
 
 export const StatInfo: React.FC<IStatProps> = ({ title, pledge }) => {
   return (
     <StatContainer>
-      <TitleWrapper>{title}</TitleWrapper>
-      <TextWrapper>{pledge}</TextWrapper>
+      <Title>{title}</Title>
+      <Text>{pledge}</Text>
     </StatContainer>
   );
 };
