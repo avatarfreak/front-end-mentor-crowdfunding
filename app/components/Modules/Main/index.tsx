@@ -1,13 +1,14 @@
 import React from "react";
+import { Project } from "./Details";
 import { Monitor } from "./Monitor";
 import { Statistics } from "./Stat";
-import { StatInfo } from "./Stat/StatInfo";
 
 export const Content = () => {
   return (
     <>
       <Monitor />
       <Statistics />
+      <Project />
     </>
   );
 };
