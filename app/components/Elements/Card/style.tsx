@@ -76,13 +76,14 @@ export const CardWrapper = styled.div`
   border: 1px solid #ddd;
   box-shadow: 0 0 1px rgba(241, 241, 241, 0.5);
   border-radius: 0.5rem;
-  margin-bottom: 3rem;
+  margin: 2rem auto;
   background: #fff;
   &.active {
     opacity: 0.6;
     & ${ButtonWrapper} {
       background: var(--darkgray);
-      cursor: not-allowed;
+      pointer-events: none;
+      user-select: none;
     }
   }
 `;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { pledge } from "./data";
 import {
   Card,
@@ -15,8 +15,11 @@ import {
   Time,
 } from "@/Elements/Main/Project/Pledges";
 
+interface IProps {
+  setShowModal: React.Dispatch<SetStateAction<boolean>>;
+}
 type Pledges = typeof pledge;
-const Pledge: React.FC = () => {
+const Pledge: React.FC<IProps> = ({ setShowModal }) => {
   const [pledges, setPledges] = useState<Pledges>(pledge);
 
   return (
@@ -39,7 +42,7 @@ const Pledge: React.FC = () => {
             </Duration>
 
             <CTA>
-              <Button>{data.btnText}</Button>
+              <Button onClick={() => setShowModal((prev) => !prev)}>{data.btnText}</Button>
             </CTA>
           </Footer>
         </Card>

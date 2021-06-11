@@ -1,8 +1,12 @@
 import { Card, Title, Text } from "@/Elements/Main/Project";
-import React from "react";
+import React, { SetStateAction } from "react";
 import Pledge from "./Pledges";
 
-export const Project = () => {
+interface IProps {
+  setShowModal: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export const Project: React.FC<IProps> = ({ setShowModal }) => {
   return (
     <Card>
       <Title>About this project</Title>
@@ -16,7 +20,7 @@ export const Project = () => {
         Featuring artisan craftsmanship, the simplicity of design creates extra desk space below
         your computer to allow notepads, pens, and USB sticks to be stored under the stand.
       </Text>
-      <Pledge />
+      <Pledge setShowModal={setShowModal} />
     </Card>
   );
 };

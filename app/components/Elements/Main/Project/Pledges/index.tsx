@@ -11,6 +11,7 @@ import {
   DurationWrapper,
   DayWrapper,
   TimeWrapper,
+  CardWrapper,
 } from "@/Elements/Card/style";
 import styled from "styled-components";
 
