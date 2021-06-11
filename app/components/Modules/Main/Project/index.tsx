@@ -1,5 +1,6 @@
 import { Card, Title, Text } from "@/Elements/Main/Project";
 import React from "react";
+import Pledge from "./Pledges";
 
 export const Project = () => {
   return (
@@ -15,6 +16,7 @@ export const Project = () => {
         Featuring artisan craftsmanship, the simplicity of design creates extra desk space below
         your computer to allow notepads, pens, and USB sticks to be stored under the stand.
       </Text>
+      <Pledge />
     </Card>
   );
 };
