@@ -46,6 +46,7 @@ export const FormWrapper = styled.div`
 
 export const Card = styled.section`
   text-align: left;
+  cursor: pointer;
 `;
 
 export const Header = styled(HeaderWrapper)`

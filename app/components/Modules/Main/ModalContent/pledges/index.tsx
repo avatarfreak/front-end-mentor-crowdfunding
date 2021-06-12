@@ -1,4 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
+import { RadioButton } from "@/Elements/Button/Radio";
+import CardContainer from "@/Elements/Card";
 import { Form } from "@/Modules/Main/ModalContent/Form";
 import {
   PledgeWrapper,
@@ -12,8 +14,6 @@ import {
   Duration,
   Day,
   Time,
-  Button,
-  CTA,
   Heading,
   FormWrapper,
 } from "@/Elements/Main/ModalContent/Pledges";
@@ -21,24 +21,31 @@ import { modalPledgeData } from "./data";
 
 type IData = typeof modalPledgeData;
 
-import React from "react";
-import { RadioButton } from "@/Elements/Button/Radio";
-import CardContainer from "@/Elements/Card";
-
 export const ModalPledge = () => {
   const [pledges, setPledges] = useState<IData>(modalPledgeData);
-  const [parentId, setParentId] = useState<Number>(0);
-  useLayoutEffect(() => {}, []);
+  const [parentId, setParentId] = useState<number>(1);
+
+  const cardRef = pledges.reduce((acc: {}, value) => {
+    acc[value.id] = useRef();
+    return acc;
+  }, {});
+
+  useLayoutEffect(() => {
+    const { current } = cardRef[parentId];
+    current.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [parentId]);
 
   return (
     <PledgeWrapper>
       {pledges.map((data) => (
         <CardContainer
-          activeStyle={data.day === 0 ? "active" : "inactive"}
           key={data.id}
+          activeStyle={data.day === 0 ? "active" : "inactive"}
           tabIndex={data.id}
         >
-          <Card>
+          <Card ref={cardRef[data.id]} onClick={() => setParentId(data.id)}>
             <Header>
               <RadioButton value={data.id} parentId={parentId} setParentId={setParentId} />
               <Heading>
