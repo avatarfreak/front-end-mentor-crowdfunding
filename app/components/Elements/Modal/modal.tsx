@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 2;
 `;
 
 export const ModalContainer: React.FC<React.ReactNode> = ({ children }) => {
