@@ -8,6 +8,7 @@ import { ModalPledge } from "./ModalContent/pledges";
 
 export const Content = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
+
   return (
     <>
       <Modal showModal={showModal}>

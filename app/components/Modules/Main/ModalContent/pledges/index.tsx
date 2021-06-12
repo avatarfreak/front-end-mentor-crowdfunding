@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { Form } from "@/Modules/Main/ModalContent/Form";
 import {
   PledgeWrapper,
   Text,
@@ -14,6 +15,7 @@ import {
   Button,
   CTA,
   Heading,
+  FormWrapper,
 } from "@/Elements/Main/ModalContent/Pledges";
 import { modalPledgeData } from "./data";
 
@@ -21,32 +23,46 @@ type IData = typeof modalPledgeData;
 
 import React from "react";
 import { RadioButton } from "@/Elements/Button/Radio";
+import CardContainer from "@/Elements/Card";
 
 export const ModalPledge = () => {
   const [pledges, setPledges] = useState<IData>(modalPledgeData);
+  const [parentId, setParentId] = useState<number>(0);
+
+  useLayoutEffect(() => {}, []);
+
   return (
     <PledgeWrapper>
       {pledges.map((data) => (
-        <Card key={data.id} activeStyle={data.day === 0 ? "active" : "inactive"}>
-          <Header>
-            <RadioButton />
-            <Heading>
-              <Title>{data.title}</Title>
-              <SubTitle>{data.pledge}</SubTitle>
-            </Heading>
-          </Header>
+        <CardContainer
+          activeStyle={data.day === 0 ? "active" : "inactive"}
+          key={data.id}
+          tabIndex={data.id}
+        >
+          <Card>
+            <Header>
+              <RadioButton />
+              <Heading>
+                <Title>{data.title}</Title>
+                <SubTitle>{data.pledge}</SubTitle>
+              </Heading>
+            </Header>
 
-          <Body>
-            <Text>{data.text}</Text>
-          </Body>
+            <Body>
+              <Text>{data.text}</Text>
+            </Body>
 
-          <Footer>
-            <Duration>
-              <Day>{data.day}</Day>
-              <Time>{data.left}</Time>
-            </Duration>
-          </Footer>
-        </Card>
+            <Footer>
+              <Duration>
+                <Day>{data.day}</Day>
+                <Time>{data.left}</Time>
+              </Duration>
+            </Footer>
+            <FormWrapper>
+              <Form amount={data.amount} />
+            </FormWrapper>
+          </Card>
+        </CardContainer>
       ))}
     </PledgeWrapper>
   );

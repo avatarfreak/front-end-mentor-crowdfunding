@@ -38,14 +38,15 @@ export const PledgeWrapper = styled.div`
     }
   }
 `;
+
 export const FormWrapper = styled.div`
-  text-align: center;
-  padding: 1rem 1.5rem;
+  margin: 1rem 0;
   border-top: 1px solid #ddd;
-  display: none;
 `;
 
-export const Card = styled(CardContainer)``;
+export const Card = styled.section`
+  text-align: left;
+`;
 
 export const Header = styled(HeaderWrapper)`
   display: flex;

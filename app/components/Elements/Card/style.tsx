@@ -85,4 +85,7 @@ export const CardWrapper = styled.div`
       background: var(--darkgray);
     }
   }
+  &:focus-within {
+    border-color: var(--cyan);
+  }
 `;
