@@ -80,10 +80,9 @@ export const CardWrapper = styled.div`
   background: #fff;
   &.active {
     opacity: 0.6;
+    pointer-events: none;
     & ${ButtonWrapper} {
       background: var(--darkgray);
-      pointer-events: none;
-      user-select: none;
     }
   }
 `;
