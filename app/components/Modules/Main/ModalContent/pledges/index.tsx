@@ -27,8 +27,7 @@ import CardContainer from "@/Elements/Card";
 
 export const ModalPledge = () => {
   const [pledges, setPledges] = useState<IData>(modalPledgeData);
-  const [parentId, setParentId] = useState<number>(0);
-
+  const [parentId, setParentId] = useState<Number>(0);
   useLayoutEffect(() => {}, []);
 
   return (
@@ -41,7 +40,7 @@ export const ModalPledge = () => {
         >
           <Card>
             <Header>
-              <RadioButton />
+              <RadioButton value={data.id} parentId={parentId} setParentId={setParentId} />
               <Heading>
                 <Title>{data.title}</Title>
                 <SubTitle>{data.pledge}</SubTitle>

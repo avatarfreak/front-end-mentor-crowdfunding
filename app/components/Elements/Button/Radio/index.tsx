@@ -32,10 +32,15 @@ export const RadioContainer = styled.label`
   }
 `;
 
-export const RadioButton = () => {
+export const RadioButton = ({ parentId, setParentId, value }) => {
   return (
     <RadioContainer>
-      <Radio name="radio" />
+      <Radio
+        name="radio"
+        value={value}
+        checked={value == parentId}
+        onChange={(e) => setParentId(e.target.value)}
+      />
       <CheckMark />
     </RadioContainer>
   );
