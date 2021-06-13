@@ -67,7 +67,7 @@ export const ButtonWrapper = styled.button<{ bg?: string; clr?: string }>`
   background: ${({ bg }) => (bg ? bg : "var(--cyan)")};
 
   &:hover {
-    opacity: 0.8;
+    background: var(--darkcyan);
   }
 `;
 
