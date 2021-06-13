@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import { ModalContainer } from "@/Elements/Modal/modal";
 
 interface Props {
@@ -5,5 +6,9 @@ interface Props {
   children?: React.ReactNode;
 }
 export const Modal: React.FC<Props> = ({ showModal, children }) => {
-  return showModal ? <ModalContainer>{children}</ModalContainer> : null;
+  if (!showModal) return null;
+  return createPortal(
+    <ModalContainer>{children}</ModalContainer>,
+    document.getElementById("modal")
+  );
 };
