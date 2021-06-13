@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Section, Header, Title, Button, Text } from "@/Elements/Main/ModalContent";
 import React, { SetStateAction } from "react";
-import { bodyScroll } from "Utility/bodyState";
+import { bodyScroll } from "components/Utility/scroll";
 
 interface IProps {
   setShowModal: React.Dispatch<SetStateAction<boolean>>;

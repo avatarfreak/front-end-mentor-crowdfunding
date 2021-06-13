@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { ModalContainer } from "@/Elements/Modal/modal";
-import { bodyScroll } from "Utility/bodyState";
+import { bodyScroll } from "components/Utility/scroll";
 
 interface Props {
   showModal: boolean;
