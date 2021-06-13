@@ -59,3 +59,11 @@ export const Button = styled(ButtonWrapper)`
   border-radius: 2rem;
   font-size: 1rem;
 `;
+
+export const Error = styled.section`
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #a23c32e6;
+  font-weight: var(--medium);
+`;
