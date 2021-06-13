@@ -6,6 +6,7 @@ const Layout: React.FC<React.ReactNode> = ({ children }) => {
     <>
       <GlobalStyle />
       <Head>
+        <meta name="description" content="Crowdfunding product page" />
         <title>Frontend Mentor | Crowdfunding product page</title>
       </Head>
       {children}
