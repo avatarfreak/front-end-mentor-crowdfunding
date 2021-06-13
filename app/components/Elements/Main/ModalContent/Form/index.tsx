@@ -5,6 +5,7 @@ export const Title = styled(TextWrapper)`
   text-align: center;
   font-size: 1rem;
   padding: 1.5rem 0;
+  font-weight: var(--regular);
 `;
 
 export const Body = styled.div`
@@ -12,11 +13,12 @@ export const Body = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 1.5rem;
 `;
 export const Currency = styled.span`
   position: absolute;
-  top: 0.8rem;
-  left: 1.5rem;
+  top: 1.1rem;
+  left: 1.8rem;
   display: inline-block;
   font-size: 1rem;
   font-weight: var(--bold);
@@ -24,9 +26,9 @@ export const Currency = styled.span`
 `;
 
 export const Input = styled.input.attrs({ type: "number" })`
-  height: 3rem;
-  width: 6.28rem;
-  border-radius: 1.5rem;
+  height: 3.5rem;
+  width: 7.142rem;
+  border-radius: 2rem;
   border: 1px solid #ddd;
   text-align: center;
   font-weight: var(--bold);
@@ -34,6 +36,7 @@ export const Input = styled.input.attrs({ type: "number" })`
   outline: 0;
   &:focus {
     border: 1px solid var(--cyan);
+    caret-color: var(--cyan);
   }
 
   /* Chrome, Safari, Edge, Opera */
@@ -51,6 +54,8 @@ export const Input = styled.input.attrs({ type: "number" })`
 `;
 
 export const Button = styled(ButtonWrapper)`
-  width: 7.18rem;
-  height: 3rem;
+  width: 8.214rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
 `;

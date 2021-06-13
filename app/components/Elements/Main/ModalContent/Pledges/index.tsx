@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import CardContainer from "@/Elements/Card";
 import {
   BodyWrapper,
   FooterWrapper,
@@ -12,7 +11,6 @@ import {
   DurationWrapper,
   DayWrapper,
   TimeWrapper,
-  CardWrapper,
 } from "@/Elements/Card/style";
 
 export const PledgeWrapper = styled.div`
@@ -40,13 +38,34 @@ export const PledgeWrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  margin: 1rem 0;
-  border-top: 1px solid #ddd;
+  margin-top: 1rem;
+  border-top: 2px solid #ddd;
+  padding-bottom: 1rem;
+  display: none;
 `;
 
 export const Card = styled.section`
+  position: relative;
   text-align: left;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 1px rgba(241, 241, 241, 0.5);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  background: #fff;
   cursor: pointer;
+  &.active {
+    opacity: 0.6;
+    pointer-events: none;
+    & ${ButtonWrapper} {
+      background: var(--darkgray);
+    }
+  }
+  &:focus-within {
+    border: 2px solid var(--cyan);
+    & ${FormWrapper} {
+      display: block;
+    }
+  }
 `;
 
 export const Header = styled(HeaderWrapper)`
@@ -54,6 +73,7 @@ export const Header = styled(HeaderWrapper)`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding: 1.5rem 1.5rem 0 1.5rem;
 `;
 
 export const Heading = styled.div`
@@ -72,9 +92,13 @@ export const Body = styled(BodyWrapper)``;
 
 export const Text = styled(TextWrapper)`
   font-size: 1rem;
+  padding: 0 1.5rem;
 `;
 
-export const Footer = styled(FooterWrapper)``;
+export const Footer = styled(FooterWrapper)`
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+`;
 
 export const Button = styled(ButtonWrapper)``;
 
