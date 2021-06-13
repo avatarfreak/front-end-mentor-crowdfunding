@@ -11,6 +11,7 @@ export const Card = styled(CardWrapper)`
   position: relative;
   background: #fff;
   margin-top: -4rem;
+  width: 100%;
 `;
 
 export const Avatar = styled.div`
