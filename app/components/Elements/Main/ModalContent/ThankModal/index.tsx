@@ -2,10 +2,14 @@ import { ButtonWrapper, CardWrapper, TextWrapper, TitleWrapper } from "@/Element
 import styled from "styled-components";
 
 export const Card = styled(CardWrapper)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 85%;
+  transform: translateY(5rem);
   text-align: center;
-  width: 100%;
-  height: 100%;
-  background: salmon;
+  z-index: 20;
   & > * {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -20,7 +24,7 @@ export const Title = styled(TitleWrapper)`
 
 export const Text = styled(TextWrapper)`
   font-size: 1rem;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 `;
 
 export const Button = styled(ButtonWrapper)`

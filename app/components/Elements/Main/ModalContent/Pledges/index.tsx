@@ -41,7 +41,7 @@ export const FormWrapper = styled.div`
   margin-top: 1rem;
   border-top: 2px solid #ddd;
   padding-bottom: 1rem;
-  display: block;
+  display: none;
 `;
 
 export const Card = styled.section`
