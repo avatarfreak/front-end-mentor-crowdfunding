@@ -1,7 +1,12 @@
+import { SetStateAction } from "react";
 import Image from "next/image";
 import { Card, Success, Title, Text, Button } from "@/Elements/Main/ModalContent/ThankModal";
 
-export const ModalContent = () => {
+interface IProps {
+  setIsActive: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export const ModalContent = ({ setIsActive }) => {
   return (
     <Card>
       <Success>
@@ -12,7 +17,7 @@ export const ModalContent = () => {
         Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide.
         You will get an email once our campaign is completed.
       </Text>
-      <Button>Got it!</Button>
+      <Button onClick={() => setIsActive((prev) => !prev)}>Got it!</Button>
     </Card>
   );
 };
