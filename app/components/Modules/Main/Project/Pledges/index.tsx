@@ -17,9 +17,10 @@ import {
 
 interface IProps {
   setShowModal: React.Dispatch<SetStateAction<boolean>>;
+  setParentId: React.Dispatch<SetStateAction<number>>;
 }
 type Pledges = typeof pledge;
-const Pledge: React.FC<IProps> = ({ setShowModal }) => {
+const Pledge: React.FC<IProps> = ({ setShowModal, setParentId }) => {
   const [pledges, setPledges] = useState<Pledges>(pledge);
 
   return (
@@ -42,7 +43,14 @@ const Pledge: React.FC<IProps> = ({ setShowModal }) => {
             </Duration>
 
             <CTA>
-              <Button onClick={() => setShowModal((prev) => !prev)}>{data.btnText}</Button>
+              <Button
+                onClick={() => {
+                  setShowModal((prev) => !prev);
+                  setParentId(data.id);
+                }}
+              >
+                {data.btnText}
+              </Button>
             </CTA>
           </Footer>
         </Card>

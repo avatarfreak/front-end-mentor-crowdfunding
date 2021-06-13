@@ -4,9 +4,10 @@ import Pledge from "./Pledges";
 
 interface IProps {
   setShowModal: React.Dispatch<SetStateAction<boolean>>;
+  setParentId: React.Dispatch<SetStateAction<number>>;
 }
 
-export const Project: React.FC<IProps> = ({ setShowModal }) => {
+export const Project: React.FC<IProps> = ({ setShowModal, setParentId }) => {
   return (
     <Card>
       <Title>About this project</Title>
@@ -20,7 +21,7 @@ export const Project: React.FC<IProps> = ({ setShowModal }) => {
         Featuring artisan craftsmanship, the simplicity of design creates extra desk space below
         your computer to allow notepads, pens, and USB sticks to be stored under the stand.
       </Text>
-      <Pledge setShowModal={setShowModal} />
+      <Pledge setShowModal={setShowModal} setParentId={setParentId} />
     </Card>
   );
 };

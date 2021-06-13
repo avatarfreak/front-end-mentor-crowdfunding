@@ -8,18 +8,19 @@ import { ModalPledge } from "./ModalContent/pledges";
 
 export const Content = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [parentId, setParentId] = useState<number>(0);
 
   return (
     <>
       <Modal showModal={showModal}>
         <ModalContent setShowModal={setShowModal}>
-          <ModalPledge />
+          <ModalPledge parentId={parentId} />
         </ModalContent>
       </Modal>
 
       <Monitor setShowModal={setShowModal} />
       <Statistics />
-      <Project setShowModal={setShowModal} />
+      <Project setShowModal={setShowModal} setParentId={setParentId} />
     </>
   );
 };
