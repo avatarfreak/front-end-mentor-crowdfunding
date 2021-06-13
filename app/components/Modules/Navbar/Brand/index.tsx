@@ -7,7 +7,7 @@ const Logo: React.FC<React.ReactNode> = () => {
     <Brand>
       <Link href="/">
         <a>
-          <Image width="128" height="20" src="/images/logo.svg" />
+          <Image width="128" height="20" src="/images/logo.svg" alt="crowdfunding Logo" />
         </a>
       </Link>
     </Brand>

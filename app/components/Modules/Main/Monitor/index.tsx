@@ -13,7 +13,13 @@ export const Monitor: React.FC<IProps> = ({ setShowModal }) => {
       <Card>
         <Header>
           <Avatar>
-            <Image src="/images/logo-mastercraft.svg" height={56} width={56} layout="fixed" />
+            <Image
+              src="/images/logo-mastercraft.svg"
+              height={56}
+              width={56}
+              alt="mastercraft icon"
+              layout="fixed"
+            />
           </Avatar>
           <Title>Mastercraft Bamboo Monitor Riser</Title>
         </Header>
@@ -23,7 +29,13 @@ export const Monitor: React.FC<IProps> = ({ setShowModal }) => {
         <Footer>
           <Button onClick={() => setShowModal((prev) => !prev)}>Back this project</Button>
           <Bookmark>
-            <Image src="/images/icon-bookmark.svg" width="56" height="56" layout="fixed" />
+            <Image
+              src="/images/icon-bookmark.svg"
+              width="56"
+              height="56"
+              alt="bookmark icon"
+              layout="fixed"
+            />
           </Bookmark>
         </Footer>
       </Card>
