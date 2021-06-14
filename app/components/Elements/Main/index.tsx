@@ -8,7 +8,8 @@ export const Main = styled.main`
   align-items: center;
   position: relative;
 
-  @media (min-width: 1200px) {
-    margin: auto 353px;
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    margin: 0 auto;
+    width: 52.14rem;
   }
 `;
