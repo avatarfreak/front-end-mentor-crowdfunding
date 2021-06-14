@@ -1,5 +1,16 @@
 import Header from "@/Elements/Header";
-import { Avatar, Card, Title, Text, Footer, Bookmark, Button, Body } from "@/Elements/Main/Monitor";
+import {
+  Avatar,
+  Card,
+  Title,
+  Text,
+  Footer,
+  Bookmark,
+  Button,
+  Body,
+  Btn,
+  Logo,
+} from "@/Elements/Main/Monitor";
 import Image from "next/image";
 import { SetStateAction } from "react";
 
@@ -29,13 +40,15 @@ export const Monitor: React.FC<IProps> = ({ setShowModal }) => {
         <Footer>
           <Button onClick={() => setShowModal((prev) => !prev)}>Back this project</Button>
           <Bookmark>
-            <Image
-              src="/images/icon-bookmark.svg"
-              width="56"
-              height="56"
-              alt="bookmark icon"
-              layout="fixed"
-            />
+            <Logo>
+              <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fillRule="evenodd">
+                  <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                  <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                </g>
+              </svg>
+            </Logo>
+            <Btn>Bookmark</Btn>
           </Bookmark>
         </Footer>
       </Card>
