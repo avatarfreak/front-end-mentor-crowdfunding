@@ -1,1 +1,0 @@
-export const bodyScroll = (option = "auto") => document.querySelector('body').style.overflow = option;
