@@ -1,7 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { RadioButton } from "@/Elements/Button/Radio";
-import CardContainer from "@/Elements/Card";
-import { Form } from "@/Modules/Main/ModalContent/Form";
+import { FormContent } from "@/Modules/Main/ModalContent/Form";
 import {
   PledgeWrapper,
   Text,
@@ -88,7 +87,7 @@ export const ModalPledge: React.FC<{ parentId: number }> = ({ parentId }) => {
             </Duration>
           </Footer>
           <FormWrapper>
-            <Form amount={data.amount} />
+            <FormContent amount={data.amount} />
           </FormWrapper>
         </Card>
       ))}
