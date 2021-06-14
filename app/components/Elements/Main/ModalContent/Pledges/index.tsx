@@ -78,10 +78,24 @@ export const Header = styled(HeaderWrapper)`
 
 export const Heading = styled.div`
   padding: 0 1rem;
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & > * {
+      margin-left: 1rem;
+    }
+  }
 `;
 
 export const Title = styled(TitleWrapper)`
   font-size: 1rem;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    &:hover {
+      color: var(--cyan);
+    }
+  }
 `;
 
 export const SubTitle = styled(SubTitleWrapper)`
@@ -98,6 +112,16 @@ export const Text = styled(TextWrapper)`
 export const Footer = styled(FooterWrapper)`
   padding-left: 1.5rem;
   padding-bottom: 1.5rem;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    margin-right: 1rem;
+  }
 `;
 
 export const Button = styled(ButtonWrapper)``;
