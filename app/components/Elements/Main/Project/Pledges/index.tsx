@@ -17,7 +17,12 @@ import styled from "styled-components";
 
 export const Card = styled(CardContainer)``;
 
-export const Header = styled(HeaderWrapper)``;
+export const Header = styled(HeaderWrapper)`
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: flex;
+    flex-direction: row;
+  }
+`;
 
 export const Title = styled(TitleWrapper)`
   font-size: 1rem;
@@ -33,7 +38,12 @@ export const Text = styled(TextWrapper)`
   font-size: 1rem;
 `;
 
-export const Footer = styled(FooterWrapper)``;
+export const Footer = styled(FooterWrapper)`
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: flex;
+    flex-direction: row;
+  }
+`;
 
 export const Button = styled(ButtonWrapper)``;
 
