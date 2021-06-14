@@ -1,12 +1,5 @@
 import styled from "styled-components";
-import {
-  ButtonWrapper,
-  CardWrapper,
-  FooterWrapper,
-  TextWrapper,
-  TitleWrapper,
-} from "../../Card/style";
-
+import { ButtonWrapper, CardWrapper, FooterWrapper, TextWrapper } from "../../Card/style";
 export const Card = styled(CardWrapper)`
   position: relative;
   background: #fff;
@@ -25,14 +18,15 @@ export const Avatar = styled.div`
 export const Header = styled.header``;
 
 export const Title = styled.h1`
-  font-size: calc(1rem + 1.6vw);
+  font-size: clamp(1.43rem, 4vw, 2rem);
   padding: 1.5rem 2.5rem;
   color: var(--black);
 `;
+
 export const Body = styled.div``;
 
 export const Text = styled(TextWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.143rem);
   font-weight: var(--regular);
 `;
 
@@ -43,7 +37,54 @@ export const Footer = styled(FooterWrapper)`
 
 export const Button = styled(ButtonWrapper)`
   width: 13rem;
-  height: 3.5rem;
+  height: 4rem;
   border-radius: 2rem;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    font-size: 1.14rem;
+  }
 `;
-export const Bookmark = styled.div``;
+
+export const Logo = styled.div`
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    position: absolute;
+  }
+`;
+
+export const Btn = styled(Button)`
+  display: none;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: block;
+    font-size: 1.14rem;
+    height: 4rem;
+    width: 12rem;
+    text-indent: 2pc;
+    background: #c9c5c5;
+  }
+`;
+
+export const Bookmark = styled.div`
+  position: relative;
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: flex;
+    &:hover {
+      & ${Btn} {
+        width: 13rem;
+        color: var(--cyan);
+        background: #ddd;
+        &::after {
+          content: "ed";
+        }
+      }
+      & ${Logo} svg {
+        circle {
+          fill: var(--cyan);
+        }
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+`;
