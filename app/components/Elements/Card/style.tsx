@@ -72,7 +72,11 @@ export const ButtonWrapper = styled.button<{ bg?: string; clr?: string }>`
 `;
 
 export const CardWrapper = styled.div`
-  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: clamp(1.5rem, 4vw, 3.43rem);
+  padding-right: clamp(1.5rem, 4vw, 3.43rem);
+
   border: 1px solid #ddd;
   box-shadow: 0 0 1px rgba(241, 241, 241, 0.5);
   border-radius: 0.5rem;
