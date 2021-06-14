@@ -1,19 +1,42 @@
 import { ButtonWrapper, TextWrapper } from "@/Elements/Card/style";
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: fex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
 export const Title = styled(TextWrapper)`
   text-align: center;
   font-size: 1rem;
   padding: 1.5rem 0;
   font-weight: var(--regular);
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    position: absolute;
+    padding: 0;
+    padding-left: 1.5rem;
+  }
 `;
 
 export const Body = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 1.5rem;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    margin-top: 2rem;
+    & > * {
+      margin-left: 1rem;
+    }
+  }
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
 `;
 export const Currency = styled.span`
   position: absolute;
