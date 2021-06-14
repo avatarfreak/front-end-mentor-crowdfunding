@@ -6,14 +6,14 @@ export const Card = styled(CardWrapper)`
 `;
 
 export const Title = styled(TitleWrapper)`
-  font-size: calc(1rem + 1.06vw);
+  font-size: 1.43rem;
   font-weight: var(--bold);
   padding-bottom: 2rem;
   padding-top: 1rem;
 `;
 
 export const Text = styled(TextWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.143rem);
   font-weight: var(--regular);
   padding-bottom: 2rem;
 `;
