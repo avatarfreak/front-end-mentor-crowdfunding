@@ -5,6 +5,10 @@ export const Card = styled(CardWrapper)`
   background: #fff;
   margin-top: -4rem;
   width: 100%;
+
+  @media ${({ theme }) => theme.breakpoints.laptop} {
+    margin-top: -7rem;
+  }
 `;
 
 export const Avatar = styled.div`
