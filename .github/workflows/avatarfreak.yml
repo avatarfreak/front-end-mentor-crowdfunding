@@ -13,6 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: NEXT_PUBLIC_BASE_PATH: /avatarfreak/front-end-mentor-crowdfunding 
 
     strategy:
       matrix:
@@ -27,6 +28,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build
+    - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
