@@ -9,7 +9,15 @@ export const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  margin-top: clamp(27px, 4.5vh, 47px);
+  margin-left: clamp(24px, 6vw, 166px);
+  margin-right: clamp(24px, 6vw, 166px);
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    margin-top: clamp(27px, 6vh, 47px);
+    margin-left: clamp(24px, 12vw, 166px);
+    margin-right: clamp(24px, 12vw, 166px);
+  }
 `;
 
 export const Navbar: React.FC<React.ReactNode> = ({ children }) => {
