@@ -30,7 +30,7 @@ export const MenuWrapper = styled.ul`
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20%);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 1s ease;
   &.active {
     opacity: 1;
     visibility: visible;
