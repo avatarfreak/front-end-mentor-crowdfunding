@@ -7,6 +7,11 @@ const BackgroundImage = styled.div`
   background-position: center;
   min-height: 37vh;
   filter: brightness(0.9);
+
+  @media ${({ theme }) => theme.breakpoints.laptop} {
+    background: url("/images/image-hero-desktop.jpg");
+    height: 400px;
+  }
 `;
 
 export default BackgroundImage;
