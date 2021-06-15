@@ -18,7 +18,8 @@
       "@/Elements/*": ["components/Elements/*"],
       "@/Modules/*": ["components/Modules/*"],
       "@/Layout/*": ["components/Layout/*"],
-      "@/Theme/*": ["components/Theme/*"]
+      "@/Theme/*": ["components/Theme/*"],
+      "@/Utility/*": ["components/Utility/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
