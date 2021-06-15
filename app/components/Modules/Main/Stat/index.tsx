@@ -1,5 +1,5 @@
 import { Statistic } from "@/Elements/Main/Stats";
-import { StatsContainer } from "@/Elements/Main/Stats/style";
+import { Container } from "@/Elements/Main/Stats/style";
 import { useState } from "react";
 import ProgressBar from "../Progress";
 import { stats } from "./data";
@@ -12,9 +12,11 @@ export const Statistics: React.FC = () => {
   return (
     <>
       <Statistic>
-        {data.map(({ title, pledge }, idx) => (
-          <StatInfo key={idx} title={title} pledge={pledge} />
-        ))}
+        <Container>
+          {data.map(({ title, pledge }, idx) => (
+            <StatInfo key={idx} title={title} pledge={pledge} />
+          ))}
+        </Container>
         <ProgressBar value={89_914} />
       </Statistic>
     </>
