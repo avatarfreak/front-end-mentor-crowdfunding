@@ -5,6 +5,7 @@ import Logo from "@/Modules/Navbar/Brand";
 import { Nav } from "@/Modules/Navbar/Nav";
 import { Main } from "@/Elements/Main";
 import { Content } from "@/Modules/Main";
+import { Footer } from "@/Modules/Footer/footer";
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
       <Main>
         <Content />
       </Main>
+      <Footer />
     </>
   );
 };
