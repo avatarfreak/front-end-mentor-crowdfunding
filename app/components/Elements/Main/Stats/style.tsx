@@ -7,6 +7,17 @@ export const StatsContainer = styled(CardWrapper)`
   height: 100%;
 `;
 
+export const Container = styled.div`
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    & > * {
+      flex: 1 1 100%;
+    }
+  }
+`;
+
 export const Title = styled(TitleWrapper)`
   font-size: 2.28rem;
   font-weight: var(--bold);
@@ -31,5 +42,14 @@ export const Stat = styled.div`
     border-bottom: 1px solid #dddddd;
     width: 5rem;
     margin: 0.75rem auto;
+
+    @media ${({ theme }) => theme.breakpoints.tablet} {
+      margin: 0;
+      border-bottom: 0;
+      top: 1.2rem;
+      left: 12rem;
+      height: 5rem;
+      border-right: 1px solid #dddddd;
+    }
   }
 `;

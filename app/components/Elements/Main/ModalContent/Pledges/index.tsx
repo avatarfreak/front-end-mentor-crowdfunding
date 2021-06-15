@@ -42,6 +42,10 @@ export const FormWrapper = styled.div`
   border-top: 2px solid #ddd;
   padding-bottom: 1rem;
   display: none;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    padding-top: 1rem;
+  }
 `;
 
 export const Card = styled.section`
@@ -89,7 +93,7 @@ export const Heading = styled.div`
 `;
 
 export const Title = styled(TitleWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.143rem);
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
     &:hover {
@@ -99,13 +103,14 @@ export const Title = styled(TitleWrapper)`
 `;
 
 export const SubTitle = styled(SubTitleWrapper)`
-  font-size: 1rem; ;
+  font-size: clamp(1rem, 2vw, 1.143rem);
 `;
 
 export const Body = styled(BodyWrapper)``;
 
 export const Text = styled(TextWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.08rem);
+  line-height: 1.9;
   padding: 0 1.5rem;
 `;
 
@@ -130,8 +135,11 @@ export const CTA = styled(CTAWrapper)``;
 
 export const Duration = styled(DurationWrapper)``;
 
-export const Day = styled(DayWrapper)``;
+export const Day = styled(DayWrapper)`
+  font-size: 1.28rem;
+`;
 
 export const Time = styled(TimeWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.0714rem);
+  font-weight: var(--medium);
 `;

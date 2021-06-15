@@ -1,4 +1,13 @@
 import styled from "styled-components";
+
+export const ImageWrapper = styled.div`
+  cursor: pointer;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: none;
+  }
+`;
+
 export const CollapsibleMenu = styled.nav`
   position: absolute;
   top: 0;
@@ -7,6 +16,11 @@ export const CollapsibleMenu = styled.nav`
   filter: drop-shadow(0 0 2px gray);
   margin-top: 4rem;
   z-index: 1;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    position: unset;
+    margin: 0;
+  }
 `;
 
 export const MenuWrapper = styled.ul`
@@ -16,10 +30,19 @@ export const MenuWrapper = styled.ul`
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20%);
-  transition: all 0.8s ease;
+  transition: transform 0.5s ease;
   &.active {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+    background: transparent;
     transform: translateY(0);
   }
 `;
@@ -36,6 +59,16 @@ export const Item = styled.li`
     padding: 1.2rem 1.24rem;
     color: var(--black);
     font-weight: var(--medium);
+    &:hover {
+      font-weight: var(--bold);
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    border: 0;
+    a {
+      color: #fff;
+    }
   }
 `;
 
