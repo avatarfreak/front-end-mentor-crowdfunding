@@ -21,7 +21,7 @@ export const DurationWrapper = styled.div`
 `;
 
 export const DayWrapper = styled.h4<{ fsz?: string }>`
-  font-size: ${({ fsz }) => (fsz ? fsz : "2")}rem;
+  font-size: ${({ fsz }) => (fsz ? fsz : "2.3")}rem;
   margin-right: 0.5rem;
 `;
 
@@ -60,7 +60,7 @@ export const ButtonWrapper = styled.button<{ bg?: string; clr?: string }>`
   border-radius: 1.5rem;
   margin: 0;
   border: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   color: ${({ clr }) => (clr ? clr : "#fff")};
@@ -74,8 +74,8 @@ export const ButtonWrapper = styled.button<{ bg?: string; clr?: string }>`
 export const CardWrapper = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  padding-left: clamp(1.5rem, 4vw, 3.43rem);
-  padding-right: clamp(1.5rem, 4vw, 3.43rem);
+  padding-left: clamp(1.5rem, 4vw, 2.9rem);
+  padding-right: clamp(1.5rem, 4vw, 2.9rem);
 
   border: 1px solid #ddd;
   box-shadow: 0 0 1px rgba(241, 241, 241, 0.5);

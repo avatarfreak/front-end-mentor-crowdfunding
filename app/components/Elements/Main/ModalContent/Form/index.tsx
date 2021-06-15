@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
 `;
 export const Title = styled(TextWrapper)`
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.0714rem);
   padding: 1.5rem 0;
   font-weight: var(--regular);
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
-    position: absolute;
+    position: relative;
     padding: 0;
     padding-left: 1.5rem;
   }
@@ -28,7 +28,7 @@ export const Body = styled.div`
   margin: 0 1.5rem;
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
-    margin-top: 2rem;
+    margin-top: 1rem;
     & > * {
       margin-left: 1rem;
     }
@@ -57,6 +57,7 @@ export const Input = styled.input.attrs({ type: "number" })`
   font-weight: var(--bold);
   font-size: 1rem;
   outline: 0;
+  cursor: pointer;
   &:focus {
     border: 1px solid var(--cyan);
     caret-color: var(--cyan);

@@ -6,6 +6,8 @@ export const Card = styled(CardWrapper)`
   top: 0;
   left: 0;
   right: 0;
+  max-width: 542px;
+  max-height: 448px;
   width: 85%;
   transform: translateY(5rem);
   text-align: center;
@@ -19,11 +21,11 @@ export const Card = styled(CardWrapper)`
 export const Success = styled.div``;
 
 export const Title = styled(TitleWrapper)`
-  font-size: 1.3rem;
+  font-size: clamp(1.27rem, 3vw, 1.714rem);
 `;
 
 export const Text = styled(TextWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.143rem);
   font-weight: var(--regular);
 `;
 
