@@ -92,4 +92,8 @@ export const CardWrapper = styled.div`
   &:focus-within {
     border-color: var(--cyan);
   }
+  @media ${({ theme }) => theme.breakpoints.laptop} {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 `;
