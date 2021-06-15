@@ -7,8 +7,8 @@ export const Radio = styled.input.attrs({ type: "radio" })`
 export const CheckMark = styled.span`
   position: absolute;
   display: block;
-  height: calc(100% - 6px);
-  width: calc(100% - 6px);
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
   border-radius: 50%;
 
   &:hover {
