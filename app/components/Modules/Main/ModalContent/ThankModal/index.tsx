@@ -1,7 +1,6 @@
 import { SetStateAction } from "react";
 import Image from "next/image";
 import { Card, Success, Title, Text, Button } from "@/Elements/Main/ModalContent/ThankModal";
-import { prefix } from "@/Utility/prefix";
 
 interface IProps {
   setIsActive: React.Dispatch<SetStateAction<boolean>>;

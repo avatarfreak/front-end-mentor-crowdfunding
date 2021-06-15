@@ -1,5 +1,4 @@
 import { ImageWrapper } from "@/Elements/Header/Navbar/Nav/Menu";
-import { prefix } from "@/Utility/prefix";
 import Image from "next/image";
 import { IProps } from "./type";
 
