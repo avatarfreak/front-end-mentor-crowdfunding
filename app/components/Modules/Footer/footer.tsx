@@ -13,11 +13,16 @@ export const Footer: React.FC = () => {
     <Wrapper>
       Challenge by{" "}
       <Link href="https://www.frontendmentor.io?ref=challenge">
-        <a target="_blank">Frontend Mentor </a>
+        <a target="_blank" rel="noreferrer">
+          Frontend Mentor{" "}
+        </a>
       </Link>
       . Coded by{" "}
       <Link href="https://github.com/avatarfreak">
-        <a target="_blank"> avatarfreak</a>
+        <a target="_blank" rel="noreferrer">
+          {" "}
+          avatarfreak
+        </a>
       </Link>
       .
     </Wrapper>
