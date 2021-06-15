@@ -8,19 +8,9 @@ export const MenuTrigger: React.FC<IProps> = ({ active, setActive }) => {
     <>
       <ImageWrapper onClick={() => setActive((prev) => !prev)}>
         {!active ? (
-          <Image
-            width="15"
-            height="15"
-            src={prefix + "/images/icon-hamburger.svg"}
-            alt="hamburger menu"
-          />
+          <Image width="15" height="15" src="/images/icon-hamburger.svg" alt="hamburger menu" />
         ) : (
-          <Image
-            width="15"
-            height="15"
-            src={prefix + "/images/icon-close-menu.svg"}
-            alt="close menu icon"
-          />
+          <Image width="15" height="15" src="/images/icon-close-menu.svg" alt="close menu icon" />
         )}
       </ImageWrapper>
     </>

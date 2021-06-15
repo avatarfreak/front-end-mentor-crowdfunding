@@ -11,7 +11,7 @@ export const ModalContent = ({ setIsActive }) => {
   return (
     <Card>
       <Success>
-        <Image height="64" width="64" src={prefix + "/images/icon-check.svg"} alt="success logo" />
+        <Image height="64" width="64" src="/images/icon-check.svg" alt="success logo" />
       </Success>
       <Title> Thanks for your support!</Title>
       <Text>
