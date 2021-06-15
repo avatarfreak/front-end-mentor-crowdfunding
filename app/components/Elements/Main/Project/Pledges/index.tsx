@@ -11,7 +11,6 @@ import {
   DurationWrapper,
   DayWrapper,
   TimeWrapper,
-  CardWrapper,
 } from "@/Elements/Card/style";
 import styled from "styled-components";
 
@@ -25,17 +24,17 @@ export const Header = styled(HeaderWrapper)`
 `;
 
 export const Title = styled(TitleWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.29rem);
 `;
 
 export const SubTitle = styled(SubTitleWrapper)`
-  font-size: 1rem; ;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 `;
 
 export const Body = styled(BodyWrapper)``;
 
 export const Text = styled(TextWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.143rem);
 `;
 
 export const Footer = styled(FooterWrapper)`
@@ -54,5 +53,5 @@ export const Duration = styled(DurationWrapper)``;
 export const Day = styled(DayWrapper)``;
 
 export const Time = styled(TimeWrapper)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 `;
