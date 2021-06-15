@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
 }
 html{
   font-size:14px;
+  scroll-behavior:smooth;
 }
 
 html,
