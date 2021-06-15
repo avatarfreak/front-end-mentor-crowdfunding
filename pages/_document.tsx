@@ -1,3 +1,4 @@
+import { prefix } from "@/Utility/prefix";
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -37,6 +38,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="shortcut icon" href={prefix + "/images/favicon-32x32.png"} />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <noscript>
             <link
