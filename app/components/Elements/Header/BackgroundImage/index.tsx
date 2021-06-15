@@ -1,7 +1,8 @@
+import { prefix } from "@/Utility/prefix";
 import styled from "styled-components";
 
 const BackgroundImage = styled.div`
-  background: url("/images/image-hero-mobile.jpg");
+  background: url(prefix/images/image-hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -9,7 +10,7 @@ const BackgroundImage = styled.div`
   filter: brightness(0.9);
 
   @media ${({ theme }) => theme.breakpoints.laptop} {
-    background: url("/images/image-hero-desktop.jpg");
+    background: url(prefix/images/image-hero-desktop.jpg);
     height: 400px;
   }
 `;
