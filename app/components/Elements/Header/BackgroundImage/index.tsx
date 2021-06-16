@@ -11,7 +11,7 @@ const BackgroundImage = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.laptop} {
     background: url(${prefix}+"/images/image-hero-desktop.jpg");
-    height: 400px;
+    max-height: 400px;
   }
 `;
 
