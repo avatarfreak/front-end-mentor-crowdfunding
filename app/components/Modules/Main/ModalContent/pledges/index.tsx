@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { SetStateAction, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { RadioButton } from "@/Elements/Button/Radio";
 import { FormContent } from "@/Modules/Main/ModalContent/Form";
 import {
@@ -18,9 +18,14 @@ import {
 } from "@/Elements/Main/ModalContent/Pledges";
 import { modalPledgeData } from "./data";
 
+interface IProps {
+  parentId: number;
+  setShowModal: React.Dispatch<SetStateAction<boolean>>;
+}
+
 type IData = typeof modalPledgeData;
 
-export const ModalPledge: React.FC<{ parentId: number }> = ({ parentId }) => {
+export const ModalPledge: React.FC<IProps> = ({ parentId, setShowModal }) => {
   const [pledges, setPledges] = useState<IData>(modalPledgeData);
   const [parentIdx, setParentIdx] = useState<number>(parentId);
 
@@ -87,7 +92,7 @@ export const ModalPledge: React.FC<{ parentId: number }> = ({ parentId }) => {
             </Duration>
           </Footer>
           <FormWrapper>
-            <FormContent amount={data.amount} />
+            <FormContent amount={data.amount} setShowModal={setShowModal} />
           </FormWrapper>
         </Card>
       ))}
