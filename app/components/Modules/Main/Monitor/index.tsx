@@ -11,7 +11,6 @@ import {
   Btn,
   Logo,
 } from "@/Elements/Main/Monitor";
-import { prefix } from "@/Utility/prefix";
 import Image from "next/image";
 import { SetStateAction } from "react";
 
@@ -26,7 +25,7 @@ export const Monitor: React.FC<IProps> = ({ setShowModal }) => {
         <Header>
           <Avatar>
             <Image
-              src={`${prefix}/images/logo-mastercraft.svg`}
+              src="/images/logo-mastercraft.svg"
               height={56}
               width={56}
               alt="mastercraft icon"
