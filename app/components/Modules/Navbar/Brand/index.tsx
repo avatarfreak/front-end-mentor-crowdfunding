@@ -11,7 +11,7 @@ const Logo: React.FC<React.ReactNode> = () => {
           <Image
             width="128"
             height="20"
-            src={`${prefix}/images/logo.svg `}
+            src={prefix + "/images/logo.svg"}
             alt="crowdfunding Logo"
           />
         </a>
