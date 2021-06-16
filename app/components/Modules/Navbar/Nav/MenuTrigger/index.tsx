@@ -11,14 +11,14 @@ export const MenuTrigger: React.FC<IProps> = ({ active, setActive }) => {
           <Image
             width="15"
             height="15"
-            src={prefix + "/images/icon-hamburger.svg"}
+            src={`${prefix}/images/icon-hamburger.svg`}
             alt="hamburger menu"
           />
         ) : (
           <Image
             width="15"
             height="15"
-            src={prefix + "/images/icon-close-menu.svg"}
+            src={`${prefix}/images/icon-close-menu.svg`}
             alt="close menu icon"
           />
         )}
