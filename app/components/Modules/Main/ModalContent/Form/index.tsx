@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import {
   Title,
   Body,
@@ -11,8 +11,14 @@ import {
 } from "@/Elements/Main/ModalContent/Form";
 import { ModalContent } from "@/Modules/Main/ModalContent/ThankModal";
 import { Modal } from "@/Modules/Modal/Modal";
+import { setPledge } from "@/Utility/getValue";
 
-export const FormContent = ({ amount }) => {
+interface IProps {
+  amount: number;
+  setShowModal: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export const FormContent: React.FC<IProps> = ({ amount, setShowModal }) => {
   const [value, setValue] = useState<number>(amount);
   const [isActive, setIsActive] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
@@ -25,6 +31,8 @@ export const FormContent = ({ amount }) => {
       return;
     }
 
+    //collect data from input field
+    setPledge(value);
     setIsActive(!isActive);
     setError("");
     setValue(amount);
@@ -40,7 +48,6 @@ export const FormContent = ({ amount }) => {
               <Currency>$</Currency>
               <Input
                 min={amount}
-                placeholder={amount}
                 value={value}
                 onChange={(e) => setValue(parseFloat(e.target.value))}
               />
@@ -51,7 +58,7 @@ export const FormContent = ({ amount }) => {
         <Error>{error}</Error>
       </form>
       <Modal showModal={isActive}>
-        <ModalContent setIsActive={setIsActive} />
+        <ModalContent setIsActive={setIsActive} setShowModal={setShowModal} />
       </Modal>
     </>
   );
