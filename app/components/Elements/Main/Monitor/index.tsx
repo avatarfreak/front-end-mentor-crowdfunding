@@ -37,6 +37,7 @@ export const Text = styled(TextWrapper)`
 export const Footer = styled(FooterWrapper)`
   padding: 1.75rem 0rem;
   flex-direction: row;
+  gap: 0.4rem;
 `;
 
 export const Button = styled(ButtonWrapper)`
