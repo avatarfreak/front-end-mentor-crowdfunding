@@ -14,7 +14,7 @@ export const Content = () => {
     <>
       <Modal showModal={showModal}>
         <ModalContent setShowModal={setShowModal}>
-          <ModalPledge parentId={parentId} />
+          <ModalPledge parentId={parentId} setShowModal={setShowModal} />
         </ModalContent>
       </Modal>
 
