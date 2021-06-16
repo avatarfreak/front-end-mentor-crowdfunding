@@ -5,7 +5,7 @@ export const PrimaryMenu: React.FC<{ link: string }> = ({ link }) => {
   return (
     <>
       <Item>
-        <Link href="/#">
+        <Link href="/">
           <a>{link}</a>
         </Link>
       </Item>
