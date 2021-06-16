@@ -11,7 +11,6 @@ type Stats = typeof stats;
 export const Statistics: React.FC = () => {
   const [data] = useState<Stats>(stats);
   const value = getPledge() + 89_914;
-  console.log(value);
   return (
     <>
       <Statistic>
