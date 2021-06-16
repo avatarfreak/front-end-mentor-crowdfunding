@@ -1,5 +1,6 @@
 import { Statistic } from "@/Elements/Main/Stats";
 import { Container } from "@/Elements/Main/Stats/style";
+import { getPledge } from "@/Utility/getValue";
 import { useState } from "react";
 import ProgressBar from "../Progress";
 import { stats } from "./data";
@@ -9,6 +10,8 @@ type Stats = typeof stats;
 
 export const Statistics: React.FC = () => {
   const [data] = useState<Stats>(stats);
+  const value = getPledge() + 89_914;
+  console.log(value);
   return (
     <>
       <Statistic>
@@ -17,7 +20,7 @@ export const Statistics: React.FC = () => {
             <StatInfo key={idx} title={title} pledge={pledge} />
           ))}
         </Container>
-        <ProgressBar value={89_914} />
+        <ProgressBar value={value} />
       </Statistic>
     </>
   );
