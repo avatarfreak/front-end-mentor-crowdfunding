@@ -10,8 +10,9 @@ const BackgroundImage = styled.div`
   filter: brightness(0.9);
 
   @media ${({ theme }) => theme.breakpoints.laptop} {
-    background: url(${prefix}+"/images/image-hero-desktop.jpg");
-    max-height: 400px;
+    background: url(${prefix}/images/image-hero-desktop.jpg);
+    min-height: unset;
+    height: 400px;
   }
 `;
 
